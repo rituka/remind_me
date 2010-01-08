@@ -9,9 +9,9 @@
 # This should only be necessary until the final version of the new profile is released.
 
 development:
-  api_key: 
-  secret_key: 
-  canvas_page_name:
+  api_key: 94c2f4d80fbecaf4fd792c83b38a3de6
+  secret_key: affa9b202b60835406ea2a5651796b2d
+  canvas_page_name: RemindMe
   callback_url:
   pretty_errors: true
   set_asset_host_to_callback_url: true
