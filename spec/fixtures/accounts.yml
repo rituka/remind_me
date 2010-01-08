@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+new_facebook_user:
+  id: 1
+  facebook_uid: '12345678'
+  active: true
+fb_user_two:
+  id: 2
+  facebook_uid: '2345456'
+  active: true
+fb_user_three:
+  id: 3
+  facebook_uid: '345677'
+  active: true

@@ -1,0 +1,194 @@
+/***************************************************
+ * Rails UI Elements
+ ***************************************************/
+.flash_notice, .flash_error, .flash_warning, .flash_success, .flash_explanation {
+  border: 1px solid #ebdfb0;
+  background-color: #fff4c8;
+  padding-top:0.5em !important;
+  color: #000;
+  text-align: center;
+}
+
+.flash_error {
+  border: 1px solid #ebb0b0;
+  background-color: #ffc8c8;  
+}
+
+.flash_notice, .flash_success {
+  border: 1px solid #b0ebb0;
+  background-color: #c8ffcb;
+}
+
+.flash_notice a, .flash_error a, .flash_warning a {
+  color: #01a163;
+  border: none !important;
+}
+
+.errorExplanation h2 {
+  margin: 0;
+  color: #c00;
+}
+.errorExplanation li {
+  margin-left: 3.0em;
+  font-weight: bolder;
+  list-style: decimal;
+  color: #c00;
+}
+
+.fieldWithErrors input {
+  background-color: #faa;
+  border: 1px solid #f00;
+}
+/***************************************************
+ * Facebook UI Elements
+ ***************************************************/
+.fb_blue_button, .fb_gold_button {
+  display:block;
+  background-color: #536ea6;
+  padding:2px;
+  font-size:0.9em;
+  text-align:center;
+  color: #fff;
+  font-weight:bolder;
+  border: 1px solid #0e1f5b;
+  border-left: 1px solid #D8DFEA;
+  border-top: 1px solid #D8DFEA;
+  text-decoration:none;
+}
+
+.fb_gold_button {
+  background-color: #eff087;
+  border: 1px solid #DCDE32;
+  border-left: 1px solid #EFf087;
+  border-top: 1px solid #EFf087;
+  color: #1b1b1b;
+  
+}
+
+.fb_content_box {
+  margin: 10px 0 0 0 !important;
+  border: 1px solid transparent;
+  border-top: 1px solid #3B5998;
+}
+
+.fb_content_box .fb_content_box {
+  border: none;
+  margin: 0 !important;
+}
+
+.fb_content_box .head {
+  background-color: #D8DFEA;
+  color: #3B5998;
+  font-size: 12px !important;
+  margin:0 !important;
+  padding:5px 5px 5px 10px !important;
+  font-weight:bolder !important;
+}
+
+.fb_content_box .fb_content_box .head {
+  background:#EEEEEE none repeat scroll 0% 0%;
+}
+
+.fb_content_box .sub_head {
+  background:#EEEEEE none repeat scroll 0% 0%;
+  margin:0 !important;
+  border-top:1px solid #CCCCCC;
+  color: #444444;
+  overflow:hidden;
+  padding:2px 5px 2px 10px !important;
+  font-size: 11px !important;
+  margin-bottom: 11px !important;
+}
+
+.fb_content_box .fb_content_box .sub_head {
+  background:#fff none repeat scroll 0% 0%;
+}
+
+.fb_content_box .sub_head .inline_list {
+  margin:0 !important;
+}
+
+.fb_content_box .sub_head .inline_list li {
+  padding-left: 5px !important;
+  font-size: 11px !important;
+}
+
+.fb_content_box .sub_head .inline_list li.first {
+  padding-left: 0 !important;
+}
+
+.fb_content_box .content {
+  padding:10px !important;  
+}
+
+.inline_fb_button_list a {
+  display: block;
+  margin:0;
+  padding: 2px 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.inline_fb_button_list a:hover, .inline_fb_button_list a:active {
+  background-color: #6d84B4;
+}
+.inline_fb_button_list {
+  display: block;
+  float: left;
+  font-size: 13px;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  line-height: 2em;
+  text-align: left;
+  font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+  font-size: 11px;
+  text-align: left;
+}
+.inline_fb_button_list li {
+  background-color: #3B5998;
+  display:block;
+  float:left;
+  font-weight:bold;
+  margin:0px 10px 0px 0px;
+}
+/***************************************************
+ * Pagination
+ ***************************************************/
+.pagination {
+  padding: 3px !important;
+  margin: 3px !important;
+}
+
+.pagination a {
+  padding: 2px 5px 2px 5px;
+  margin: 2px;
+  border: 1px solid #3B5998;
+  text-decoration: none;
+  color: #3B5998;
+  background-color: transparent;
+}
+
+.pagination a:hover, .pagination a:active {
+  border: 1px solid #3B5998;
+  background-color: #3B5998;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.pagination span.current {
+  padding: 2px 5px 2px 5px;
+  margin: 2px;
+  border: 1px solid #3B5998;
+  font-weight: bold;
+  background-color: #3B5998;
+  color: #FFF;
+}
+
+.pagination span.disabled {
+  padding: 2px 5px 2px 5px;
+  margin: 2px;
+  border: 1px solid #eee;
+  color: #ddd;
+}
