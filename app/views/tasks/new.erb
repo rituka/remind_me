@@ -1,6 +1,5 @@
 <% semantic_form_for @task, :title => 'New Task' do |form| %>
   <% form.inputs do %>
-    <%= form.input :title, :input_html=>{:size =>30} %>
     <%= form.input :description, :input_html=>{:rows=>3, :cols=>30} %>
   <% end %>
     <%= form.commit_button %>
