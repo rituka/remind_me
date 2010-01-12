@@ -23,7 +23,10 @@ ActionController::Routing::Routes.draw do |map|
 
   map.root :controller => 'facebook'
 
-  map.resources :accounts
+  map.resources :accounts do |res|
+    res.resources :tasks
+  end
+  map.resources :tasks
 
   # The priority is based upon order of creation: first created -> highest priority.
 

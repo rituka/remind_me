@@ -1,6 +1,6 @@
 class FacebookController < ApplicationController
   protect_from_forgery :except => [:index, :uninstalled, :authorized] 
-  before_filter :only_for_facebook_users, :except => [:uninstalled]
+  # before_filter :only_for_facebook_users, :except => [:uninstalled]
   before_filter :find_facebook_account_during_uninstall, :only => [:uninstalled]
   before_filter :find_facebook_account, :except => [:uninstalled, :installed, :errors_with, :authorize_redirect, :authorized]
 

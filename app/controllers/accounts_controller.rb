@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
-  before_filter :only_for_facebook_users
+  # before_filter :only_for_facebook_users
   before_filter :find_facebook_account
 
   # Used to view your own account

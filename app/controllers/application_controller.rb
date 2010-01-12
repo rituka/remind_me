@@ -4,7 +4,7 @@
 class ApplicationController < ActionController::Base
   include FacebookerFilters
   helper :all # include all helpers, all the time
-
+  before_filter: set_facebook_session
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery  :secret => 'CHANGE ME TO SOMETHING SECURE'
