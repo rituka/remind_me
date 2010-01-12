@@ -1,12 +1,7 @@
-<% if ["production"].include?(ENV["RAILS_ENV"])  %>
+    <%= javascript_include_tag :defaults %>
+    <%= calendar_date_select_includes "red"  %>
     <%= stylesheet_link_tag "facebook_scaffold", :media => "screen" %>
-  <%- else -%>
-    <%= content_tag :style, File.readlines("public/stylesheets/facebook_scaffold.css").join("\n"), :type=>'text/css' %>
-  <%- end -%>
-  <%= javascript_include_tag :defaults %>
-  <%= calendar_date_select_includes "red"  %>
-  <%= stylesheet_link_tag "facebook_scaffold", :media => "screen" %>
-  <%= stylesheet_link_tag "formtastic.css", "formtastic_changes.css" %>
+    <%= stylesheet_link_tag "formtastic.css", "formtastic_changes.css" %>
   <div id='header' style = 'background: #EDEFF4; border-bottom: 1px solid #EDEFF4;'>
     <h1>Remind ME</h2>
   </div>

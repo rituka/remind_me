@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   
   def index
-    
+    @tasks = Task.find :all
   end
   
   def show
@@ -13,7 +13,14 @@ class TasksController < ApplicationController
   end
   
   def create
-    
+    @task = Task.new(params[:task])
+    if @task.save
+      flash[:message] = "Added the reminder successfully."
+      redirect_to tasks_path()
+    else
+      flash.now[:message] = "Uhh...The task can not be set. Check all the details again."
+      render :action => :new
+    end
   end
   
   def edit

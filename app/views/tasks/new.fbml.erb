@@ -1,10 +1,17 @@
-<h3> New Task </h3>
-
-<% semantic_form_for @task do |form| %>
-  <% form.inputs do %>
-    <%= form.input :description %>
-  <% end %>
-  <% form.buttons do %>
-    <%= form.commit_button %>
-  <% end %>
+<% form_for @task do |form| %>
+<p><label for='task_remind_at'> Timer:</label>
+  <%= form.calendar_date_select "remind_at", :embedded => true, :time => true %>    
+</p>
+    <p><label for='task_description'>Remind Me For:</label>
+      <%= form.text_area :description, {:rows=>3, :cols=>30} %>
+    </p>
+    <p><label for='task_status'> Do you want to share it:</label>
+      <%= form.radio_button :status, 1 %> Private(Only I can See it.)
+      <%= form.radio_button :status, 0 %> Public(Friends can see it.)
+    </p>
+    <p><label for='form_self_remind'> Who should remind it:</label>
+      <%= form.check_box :self_remind %> Remind ME (The App)
+      <%= form.check_box :self_remind %> Facebook Friends
+    </p>
+    <%=link_to 'cancel'%> <%= submit_tag 'Add Reminder' %>
 <% end %>
