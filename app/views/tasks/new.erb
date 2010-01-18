@@ -1,18 +1,27 @@
-<% form_for @task do |form| %>
-<%=error_messages_for :task %>
-<p><label for='task_remind_at'> Timer:</label>
-  <%= form.calendar_date_select "remind_at", :embedded => true, :time => true %>    
-</p>
-    <p><label for='task_description'>Remind Me For:</label>
-      <%= form.text_area :description, {:rows=>3, :cols=>30} %>
-    </p>
-    <p><label for='task_status'> Do you want to share it:</label>
-      <%= form.radio_button :status, 1 %> Private(Only I can See it.)
-      <%= form.radio_button :status, 0 %> Public(Friends can see it.)
-    </p>
-    <p><label for='form_self_remind'> Who should remind it:</label>
-      <%= form.check_box :self_remind %> Remind ME (The App)
-      <%= form.check_box :self_remind %> Facebook Friends
-    </p>
-    <%=link_to 'cancel'%> <%= submit_tag 'Add Reminder' %>
-<% end %>
+<div class='form'>
+  <% form_for @task do |form| %>
+  <%=error_messages_for :task %>
+  <div id ='left'>
+  <p><label for='task_remind_at'> Timer:</label>
+    <%= form.calendar_date_select "remind_at", :embedded => true, :time => true %>    
+  </p>
+  </div>
+  <div id='right'>
+      <p><label for='task_description'>Remind Me For:</label>
+        <%= form.text_area :description, {:rows=>3, :cols=>30} %>
+      </p>
+      <p><label for='task_status'> Do you want to share it:</label>
+        <br />
+        <%= form.radio_button :status, 1 %> Private(Only I can See it.)
+        <%= form.radio_button :status, 0 %> Public(Friends can see it.)
+      </p>
+      <p><label for='form_self_remind'> Who should remind it:</label>
+        <br />
+        <%= form.check_box :self_remind %> Remind ME (The App)
+        <%= form.check_box :self_remind %> Facebook Friends
+      </p>
+  </div>
+  <%=link_to 'cancel'%> <%= submit_tag 'Add Reminder' %>
+  
+  <% end %>
+</div>

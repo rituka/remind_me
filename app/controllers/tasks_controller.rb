@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  
+  # before_filter :find_facebook_account
   def index
     @tasks = Task.find :all
   end
