@@ -13,7 +13,7 @@
 
     <%= render_facebook_flash() %>
     <p>
-      <%= link_to 'Tasks', new_task_path(:only_path => false)%><%=@account.id%>
+      <%= link_to 'Tasks', new_task_path(:only_path => false)%> ,<%=@account.fbuid%>
     </p>
     <%= yield %>
     <script type="text/javascript" charset="utf-8">
@@ -27,3 +27,17 @@
     <%= content_tag :script, File.readlines("public/javascripts/application.js").join("\n") %>
   </body>
 </html>
+<div id ='FB_HiddenIFrameContainer' style="display:none; position:absolute; left:-100px; top:-100px; width:0px; height: 0px;">
+<script src="http://static.ak.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript" />
+<script type="text/javascript">
+  FB_RequireFeatures(["CanvasUtil"], function(){
+  FB.XdComm.Server.init('/xd_receiver.htm');
+  FB.CanvasClient.startTimerToSizeToContent();
+  });
+</script>
+<script type = "text/javascript">
+  FB_RequireFeatures(["XFBML"], function(){
+  FB.init('#{Facebooker.api_key}',"/xd_receiver.htm");
+  });
+</script>
+<script src = "http://static.ak.connect.facebook.com/connect.php/js/XFBML/IntlTag" type = "text/javascript" />
