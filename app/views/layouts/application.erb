@@ -1,23 +1,30 @@
-    <%= javascript_include_tag :defaults %>
-    <%= calendar_date_select_includes "red"  %>
-    <%= stylesheet_link_tag "facebook_scaffold", :media => "screen" %>
-    <%= stylesheet_link_tag "style.css", "formtastic.css", "formtastic_changes.css" %>
-  <div id='main-header'>
-    <span class='logo'><span>
-  </div>
+<html>
+  <head>
+      <%= javascript_include_tag :defaults %>
+      <%= calendar_date_select_includes "red"  %>
+      <%= stylesheet_link_tag "facebook_scaffold", :media => "screen" %>
+      <%= stylesheet_link_tag "style.css", "formtastic.css", "formtastic_changes.css" %>
+      
+  </head>
+  </body>
+    <div id='main-header'>
+      <span class='logo'><span>
+    </div>
 
-  <%= render_facebook_flash() %>
-  <p>
-    <a href= 'tasks/new'> Tasks</a>
-  </p>
-  <%= yield %>
-  <script type="text/javascript" charset="utf-8">
+    <%= render_facebook_flash() %>
+    <p>
+      <a href= 'tasks/new'> Tasks</a>
+    </p>
+    <%= yield %>
+    <script type="text/javascript" charset="utf-8">
 
-    // Give JS access to the canvas page name;
-    CANVAS_PAGE_NAME= '<%= ENV["FACEBOOKER_RELATIVE_URL_ROOT"] %>';
-    REMOTE_HOST = '<%= url_for :controller => "/facebook", :only_path => false, :canvas => false %>';
+      // Give JS access to the canvas page name;
+      CANVAS_PAGE_NAME= '<%= ENV["FACEBOOKER_RELATIVE_URL_ROOT"] %>';
+      REMOTE_HOST = '<%= url_for :controller => "/facebook", :only_path => false, :canvas => false %>';
 
-  </script>
-  <%= javascript_tag "AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? %>
+    </script>
+    <%= javascript_tag "AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery? %>
 
-  <%= content_tag :script, File.readlines("public/javascripts/application.js").join("\n") %>
+    <%= content_tag :script, File.readlines("public/javascripts/application.js").join("\n") %>
+  </body>
+</html>
