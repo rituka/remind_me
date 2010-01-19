@@ -1,19 +1,19 @@
 #main-header{
-	background: #EDEFF4;
-	border-bottom: 1px groove #00519C;;
+	background: url('/images/header_bg.gif')repeat-x;
+	border-bottom: 1px groove #00519C;
 	padding:10px;
 }
 #main-header span.logo{
 	font: 18px Comic Sans MS;
-	background: url('/images/logo.jpg') no-repeat;
-	margin:10px;
-	padding-left: 80px;
-	height: 90px;
+	background: url('/images/logo1.png') no-repeat;
+	margin:  10px 0;
+	height: 80px;
 	display:block;
 	color: #00519C;
 }
 div.form{
-	background:#B4D4AD;
+	background: #EDEFF4;
+	border-bottom: 1px groove #00519C;
 	color: #444;
 	padding: 10px;
 	width: 700px;

@@ -5,8 +5,7 @@ module FacebookerFilters
     base.class_eval do
       # The is a conditional before_filter that will only fire for requests using the fbml format.
       before_filter(:except => :uninstalled) do |controller|
-        if controller.params["format"].to_s == "fbml"
-          
+        if true
           # This session property will be set if the user has called the allow_login_from_facebook is called before this 
           # filter; for example, prepend_before_filter :allow_login_from_facebook, :only => [:show]
           if controller.session[:authenticate_through_facebook].nil? || controller.session[:authenticate_through_facebook] == false

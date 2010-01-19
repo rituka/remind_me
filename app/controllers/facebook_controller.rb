@@ -5,7 +5,7 @@ class FacebookController < ApplicationController
   before_filter :find_facebook_account, :except => [:uninstalled, :installed, :errors_with, :authorize_redirect, :authorized]
 
   def index
-    redirect_to account_path(@account)
+    redirect_to tasks_path(@account)
   end
 
   def authorized
