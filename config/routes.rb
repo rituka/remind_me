@@ -27,6 +27,7 @@ ActionController::Routing::Routes.draw do |map|
     res.resources :tasks
   end
   map.resources :tasks
+  map.oracle '/oracle', :controller =>'home', :action =>'index'
 
   # The priority is based upon order of creation: first created -> highest priority.
 

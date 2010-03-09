@@ -1,9 +1,13 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
-      <%= javascript_include_tag :defaults %>
-      <%= calendar_date_select_includes "red"  %>
-      <%= stylesheet_link_tag "facebook_scaffold", :media => "screen" %>
-      <%= stylesheet_link_tag "style.css", "formtastic.css", "formtastic_changes.css" %>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <%= javascript_include_tag :defaults %>
+    <%= calendar_date_select_includes "red"  %>
+    <%= stylesheet_link_tag "facebook_scaffold", :media => "screen" %>
+    <%= stylesheet_link_tag "style.css", "formtastic.css", "formtastic_changes.css" %>
       
   </head>
   </body>
@@ -13,7 +17,8 @@
 
     <%= render_facebook_flash() %>
     <p>
-      <%= link_to 'Tasks', new_task_path(:only_path => false)%> ,<%=@account.id%>
+      <%= link_to 'Tasks', new_task_path(:only_path => false), :target => '_top'%> |
+      <%= link_to 'Oracle', oracle_url, :target => '_top'%>
     </p>
     <%= yield %>
     <script type="text/javascript" charset="utf-8">

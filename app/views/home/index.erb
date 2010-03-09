@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title> Ramcharitra Manas Oracle: An Indian Mythological answer to every question.</title>
+    <script>
+      function showAns(ele)
+      {
+        var cell_num = ele.id;
+        var doha_num = cell_num % 9;
+        show(doha_num);
+      }
+      dohas = {"entries": [{"image": '/images/doha0.gif', "text": 'Success in every likelihood. The question in your mind will surely attain positive results.'},
+                {"image": '/images/doha1.gif', "text": 'Having faith in the God, go ahead, success is awaiting.' },
+                {"image": '/images/doha2.gif', "text": 'The question in your mind is not going to get beneficial results. Success is unlikely.' },
+                {"image": '/images/doha3.gif', "text": 'Part your ways from the crooked fellows, its doubtful to get succeded.' },
+                {"image": '/images/doha4.gif', "text": 'The objective is unlikely to be achieved. Leave this matter to the Almighty.'},
+                {"image": '/images/doha5.gif', "text": 'Its great question, you will succeed.'},
+                {"image": '/images/doha6.gif', "text": 'Success in every likelihood. The question in your mind will surely attain positive results.'},
+                {"image": '/images/doha7.gif', "text": 'Completion of the work is doubtful.'},
+                {"image": '/images/doha8.gif', "text": 'Its great question, work will be done.'}
+                ]
+              };
+      function show(doha)
+      {
+        var num = parseInt(doha); 
+        alert(dohas.entries[num].text);
+        
+      }
+    </script>
+    
+    <style>
+      .grdhdr { font-family:'comic sans ms', cursive;
+        font-weight:normal; font-size:14px; text-align:right; color:#5876A8 }
+      .grdbdy {  font-family:'comic sans ms', cursive;
+        font-weight:normal; font-size:14px; text-align:center;  }
+      .content {margin:20px; padding: 10px;}
+    </style>
+     <!-- chart table generated at www.isdntek.com/tagbot/grids.htm -->
+  </head>
+  <body>
+    <div class='content'>
+      <table cellspacing=1 cellpadding=1 border=0 style="background: url(/images/future.jpg);">
+        <tbody>
+          <%for i in 0..14 do %>
+          <tr>
+            <%for j in 0..14 do %>
+              <td class="grdhdr" id = <%="#{i*15+j}"%> onclick="javascript: showAns(this);" > 
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </td>
+            <%end%>
+          </tr>
+          <%end%>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
